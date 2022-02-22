@@ -1,13 +1,47 @@
-h1 {
+.webtitle {
 	color: #000080;
 	font-size: 300%;
 	text-align: center;
 }
+
 hr {
-width: 95%;
-height: 3px;
-background-color: #000080;
-margin-right: auto;
-margin-left: auto;
-margin-top: 1px;
+    width: 95%;
+    height: 3px;
+    background-color: #000080;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1px;
+}
+
+.block1 { /* for the middle content block*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    height: 600px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.block2 { /* for the bottom content block*/
+    background-color: #616161;
+}
+
+.block1 .mainbox {
+    grid-column: 1;
+    height: inherit;
+    width: 400px;
+    background-color: #616161;
+}
+
+.block1 .sidebar {
+    grid-column: 2;
+    height: inherit;
+    font-family: serif;
+    width: 225px; /* Set the width of the sidebar */
+    /*background-color: #EFEFEF; /* Grey */
+    background-color: #DCDCFF;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    text-align: left;
 }
