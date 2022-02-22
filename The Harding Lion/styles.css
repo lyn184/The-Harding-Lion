@@ -4,7 +4,7 @@
 	text-align: center;
 }
 
-hr {
+.hr {
     width: 95%;
     height: 3px;
     background-color: #000080;
@@ -44,4 +44,10 @@ hr {
     padding-left: 30px;
     padding-bottom: 20px;
     text-align: left;
+}
+
+.footer-main {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
 }
