@@ -46,8 +46,26 @@ hr {
     text-align: left;
 }
 
+.column {
+  float: left;
+  width: 24.8%;
+  background-color: #FFFFFF;
+  border-right: 2px solid #000080
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center {
+ text-align: center
+}
+
 .footer-main {
-  padding:50px 0;
+  padding:50px;
   color:#f0f9ff;
   background-color:#282d32;
 }
