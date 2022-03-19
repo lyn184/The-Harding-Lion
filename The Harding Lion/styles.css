@@ -115,6 +115,27 @@
   font-family: 'Playfair Display', serif;
   font-size: 50px;
   text-align: inherit;
+  display: inline-block;
+  position: relative;
+  color: midnightblue;
+}
+
+.mainbox-title:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: firebrick;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.mainbox-title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .editorial-title {
@@ -129,6 +150,27 @@
   font-family: 'Playfair Display', serif;
   font-size: 30px;
   font-style: bold;
+  display: inline-block;
+  position: relative;
+  color: midnightblue;
+}
+
+.title:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: firebrick;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 #block1 #top-mid-box {
@@ -216,13 +258,45 @@
   margin: 30px;
   background-color: whitesmoke;
   text-align: center;
+  -webkit-transition: color 5s;
+  transition: color 5s;
 }
+
+#block3:hover {
+  background-color: gainsboro;
+}
+
+#archived {
+  width: 1400px;
+  height: auto;
+  margin: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 450px 450px 450px;
+  background-color: whitesmoke;
+  display: block;
+
+}
+
+.archivecontent {
+  height: 450px;
+  background-color: gainsboro;
+}
+
 
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+#contributors {
+  float: left;
+  position: relative;
+  display: grid;
+  width: 1440px;
+  margin: 30px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
@@ -327,3 +401,5 @@ section {
     line-height: 1.8;
   }
 }
+
+
