@@ -1,136 +1,509 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,200;1,200&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>The Harding Lion</title>
-    <link rel="shortcut icon" type="image/jpg" href="images\favicon.png"/>
-    <meta charset="UTF-8">
-    <meta name="description" content="a school newspaper for Harding Academy of Memphis">
-    <meta name="author" content="co-authored by flynn wilkes, reed powell">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d41cbeb0f5.js" crossorigin="anonymous"></script>
+body {
+  width: auto;
+  height: auto;
+}
 
-</head>
-<body>
+#webtitle {
+	color: #000080;
+	font-size: 300%;
+	text-align: center;
+  font-family: 'Playfair Display', serif;
+}
 
-    <h1 id="webtitle">The Harding Lion</h1>
-    <style type="text/css">
+.big-line {
+  width: 97%;
+  height: 2px;
+  background-color: #000080;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
+  border: none;
+}
 
-    </style>
+#section1 {
+  width: 1500px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Playfair Display', serif;
+}
 
-    <hr class="big-line">
+#block1 { /* for the middle content block*/
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: max-content;
+  grid-auto-columns: max-content;
+  /* column-gap: 40px; */
+  /* height: 600px; */
+}
 
-    <div id="section1">
-        <div id="block1">
+#block2 { /* for the bottom content block*/
+  height: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
-            <div id="mainbox">
-                <div class="bottom-text">
-                    <p class="genre">content here <br> <b class="mainbox-title">Title Here</b></p>
-                </div>
-            </div>
+#block1 #little-line {
+  grid-column: 3;
+  grid-row: 2;
+  width: 320px;
+  height: 3px;
+  background-color: #000080;
+  border: none;
+  margin: auto;
+}
 
-            <div style="display: grid;">
-                <div id="vl1"></div>
-                
-                <div id="top-mid-box">
-                    <div class="bottom-text">
-                        <p class="genre">content here <br> <b class="title">Title Here</b></p>
-                    </div>
-                </div>
+#block1 #vl1 {
+  grid-column: 2;
+  grid-row: 1/4;
+  width: 2px;
+  height: 550px;
+  background-color: #000080;
+  border: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
 
-                <hr id="little-line">
-                
-                <div id="bottom-mid-box">
-                    <div class="bottom-text">
-                        <p class="genre">content here <br> <b class="title">Title Here</b></p>
-                    </div>
-                </div>
+#block1 #vl2 {
+  grid-column: 4;
+  grid-row: 1/4;
+  width: 2px;
+  height: 550px;
+  background-color: #000080;
+  border: none;
+  margin: auto;
+}
 
-                <div id="vl2"></div>
+#block1 #mainbox {
+  display: flex;
+  grid-column: 1;
+  grid-row: 1/4;
+  height: 600px;
+  width: 690px;
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  text-align: left;
+}
 
-                <div id="sidebar">
-                    <p class="content"><b class="title">Title Here</b> <br> content here</p>
-                </div>
-            </div>
-        </div>
+.bottom-text {
+  display: inline-block;
+  align-self: flex-end;
+}
 
-            <div id="block2">
-                <hr class="big-line">
+.bottom-middle-text {
+  display: inline-block;
+  align-self: flex-end;
+}
 
-                <div id="row">
-                    
-                    <div class="inner-column">
-                        <div class="bottom-text">
-                            <p class="genre">content here <br> <b class="title">Title Here</b></p>
-                        </div>
-                    </div>
-        
-                    <div class="inner-column">
-                        <div class="bottom-text">
-                            <p class="genre">content here <br> <b class="title">Title Here</b></p>
-                        </div>
-                    </div>
-                    
-                    <div class="inner-column">
-                        <div class="bottom-text">
-                            <p class="genre">content here <br> <b class="title">Title Here</b></p>
-                        </div>
-                    </div>
-                    
-                    <div id="outer-column">
-                        <div class="bottom-text">
-                            <p class="genre">content here <br> <b class="title">Title Here</b></p>
-                        </div>
-                    </div>
-                <hr class="big-line">
-                </div>	
-	        </div>
+.genre {
+  color: red;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 15px;
+}
 
-            <div id="block3">
-                <b class="editorial-title">Title here</b>
-                <p class="genre">byline here</p>
-            </div>  
-        </div>
-	</div>
+.content {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 15px;
+}
 
-		<footer class="footer-distributed">
+.mainbox-title {
+  color: midnightblue;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  text-align: inherit;
+  display: inline-block;
+  position: relative;
+  color: midnightblue;
+}
 
-			<div class="footer-right">
+.mainbox-title:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: firebrick;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
-				<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-youtube"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
+.mainbox-title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
-			</div>
+.editorial-title {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  text-align: inherit;
+}
 
-			<div class="footer-left">
+.title {
+  color: midnightblue;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-style: bold;
+  display: inline-block;
+  position: relative;
+  color: midnightblue;
+}
 
-				<p class="footer-links">
-					<a class="link-1" href="C:\Users\flynn\Desktop\The-Harding-Lion-main\The Harding Lion\index.html">Home</a>
+.title:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: firebrick;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
-					<a href="C:\Users\flynn\Desktop\The-Harding-Lion-main\The Harding Lion\html\archive.html">Archive</a>
+.title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
-					<a href="C:\Users\flynn\Desktop\The-Harding-Lion-main\The Harding Lion\html\contributors.html">Contributors</a>
+#block1 #top-mid-box {
+  display: flex;
+  grid-column: 3;
+  grid-row: 1;
+  height: 260px;
+  width: 315px;
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  text-align: left;
+}
 
-					<a href="C:\Users\flynn\Desktop\The-Harding-Lion-main\The Harding Lion\html\submit.html">Submit Articles</a>
+#block1 #bottom-mid-box {
+  display: flex;
+  grid-column: 3;
+  grid-row: 3;
+  height: 260px;
+  width: 315px;
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  text-align: left;
+}
 
-					<a href="C:\Users\flynn\Desktop\The-Harding-Lion-main\The Harding Lion\html\about.html">About</a>
+#block1 #sidebar {
+  grid-column: 5;
+  grid-row: 1/4;
+  height: 600px;
+  font-family: 'Playfair Display', serif;
+  width: 250px; /* Set the width of the sidebar */
+  /*background-color: #EFEFEF; /* Grey */
+  background-color: #DCDCFF;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-clip: padding-box;
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
 
-					<a href="mailto:wilkes.flynn@hardinglions.net">Contact</a>
-				</p>
+#block2 .inner-column {
+  display: flex;
+  float: left;
+  width: 315px;
+  height: 150px;
+  background-color: #FFFFFF;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
+  /* border-right: 2px solid #000080; */
+  box-shadow: inset -2px 0 #000080;
+}
 
-				<p>The Harding Lion &copy; 2022</p>
-			</div>
+#block2 #outer-column {
+  display: flex;
+  float: left;
+  width: 315px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  height: 150px;
+  background-color: #FFFFFF;
+}
 
-		</footer>>
+#block3 {
+  float: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 1440px;
+  height: 300px;
+  margin: 30px;
+  background-color: whitesmoke;
+  text-align: center;
+  -webkit-transition: color 5s;
+  transition: color 5s;
+}
 
-</body>
-</html>
+#block3:hover {
+  background-color: gainsboro;
+}
+
+#archived {
+  width: 1400px;
+  height: auto;
+  margin: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 450px 450px 450px;
+  background-color: whitesmoke;
+  display: block;
+
+}
+
+.archivecontent {
+  height: 450px;
+  background-color: gainsboro;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#contributors {
+  float: left;
+  position: relative;
+  display: grid;
+  width: 1440px;
+  margin: 30px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+  font-family: Roboto;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
 
 
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
+}
 
+
+input[type=submit] {
+  background-color: #000080;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: blue;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#coming-soon {
+  width: 1400px;
+  margin: auto;
+  margin-bottom: 10px;
+  border: 20px;
+  background-color: whitesmoke;
+  text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  display: flex;
+}
+
+@media (max-width: 600px) 
+{
+  
+  #section1 {
+    width: 750px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  #block1 {
+    display: unset;
+  }
+
+  #block2 {
+    height: 400px;
+  }
+
+  #block3 {
+    width: 720px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .inner-column {
+    margin-bottom: 20px;
+  }
+
+  body {
+    width: max-content
+  }
+
+}
+
+@media (min-width: 600px) {
+  .mobilehr {
+    display:none;
+  }
+}
+
+.mobilehr {
+  width: 97%;
+  height: 2px;
+  background-color: #000080;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
+  border: none;
+}
+
+@media (min-width: 601px) and (max-width: 1500px) {
+  body {
+    width: 1500px;
+  }
+}
